@@ -23,13 +23,13 @@ export default function Hero() {
           Frontend Developer
         </motion.span>
 
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-8 text-black">
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-8 text-foreground">
           Hello, I&apos;m <br className="md:hidden" /> Huy.
         </h1>
 
-        <p className="text-lg md:text-2xl text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
-          A <span className="text-black font-medium">passionate</span> and <span className="text-black font-medium">enthusiastic</span> young developer.
-          Currently seeking <span className="text-black font-medium">Intern/Fresher</span> opportunities.
+        <p className="text-lg md:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+          A <span className="text-foreground font-medium">passionate</span> and <span className="text-foreground font-medium">enthusiastic</span> young developer.
+          Currently seeking <span className="text-foreground font-medium">Intern/Fresher</span> opportunities.
         </p>
 
         <div className="flex flex-col md:flex-row gap-5 justify-center items-center">
@@ -37,7 +37,7 @@ export default function Hero() {
             href="#projects"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-black text-white px-8 py-4 rounded-full font-medium text-lg flex items-center gap-2 group cursor-pointer"
+            className="bg-foreground text-background px-8 py-4 rounded-full font-medium text-lg flex items-center gap-2 group cursor-pointer"
           >
             See My Work
             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -46,7 +46,7 @@ export default function Hero() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-transparent text-black border border-gray-200 px-8 py-4 rounded-full font-medium text-lg flex items-center gap-2 hover:border-black transition-colors cursor-pointer"
+            className="bg-transparent text-foreground border border-gray-200 dark:border-gray-800 px-8 py-4 rounded-full font-medium text-lg flex items-center gap-2 hover:border-foreground transition-colors cursor-pointer"
           >
             Download CV
             <Download size={20} />

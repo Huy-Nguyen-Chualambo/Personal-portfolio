@@ -26,7 +26,7 @@ const experiences = [
 
 export default function About() {
     return (
-        <section className="py-32 px-6 bg-neutral-50" id="about">
+        <section className="py-32 px-6 bg-background" id="about">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-20">
 
                 {/* Left Column: Title & Tech Stack */}
@@ -35,7 +35,7 @@ export default function About() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-bold mb-12 tracking-tight"
+                        className="text-4xl md:text-5xl font-bold mb-12 tracking-tight text-foreground"
                     >
                         Capabilities
                     </motion.h2>
@@ -48,14 +48,14 @@ export default function About() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.05 }}
-                                className="bg-white border border-gray-200 px-6 py-3 rounded-lg text-sm font-medium hover:border-black transition-colors cursor-default"
+                                className="bg-white text-slate-600 border border-slate-900 dark:bg-neutral-800 dark:text-white dark:border-neutral-700 px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-50 dark:hover:bg-neutral-700 transition-colors cursor-default"
                             >
                                 {skill}
                             </motion.span>
                         ))}
                     </div>
 
-                    <p className="mt-12 text-gray-600 leading-relaxed max-w-md">
+                    <p className="mt-12 text-gray-700 dark:text-gray-400 leading-relaxed max-w-md">
                         I am a Computer Science and Engineering student at VNU Vietnam Japan University. I have a genuine interest in web development and enjoy the process of learning how to build functional, user-friendly interfaces. I am always looking for ways to improve my skills and strive to write clear, maintainable code.
                     </p>
                 </div>
@@ -66,7 +66,7 @@ export default function About() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-bold mb-12 tracking-tight"
+                        className="text-4xl md:text-5xl font-bold mb-12 tracking-tight text-foreground"
                     >
                         Journey
                     </motion.h2>
@@ -82,12 +82,12 @@ export default function About() {
                                 className="relative pl-8 border-l border-gray-200"
                             >
                                 {/* Timeline dot */}
-                                <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-black rounded-full" />
+                                <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-black dark:bg-white rounded-full" />
 
                                 <span className="text-sm font-bold text-gray-400 mb-2 block">{exp.year}</span>
-                                <h3 className="text-xl font-bold mb-1">{exp.title}</h3>
-                                <h4 className="text-md font-medium text-gray-800 mb-4">{exp.company}</h4>
-                                <p className="text-gray-600 text-sm leading-relaxed">{exp.description}</p>
+                                <h3 className="text-xl font-bold mb-1 text-foreground">{exp.title}</h3>
+                                <h4 className="text-md font-medium text-dark-800 dark:text-dark-200 mb-4">{exp.company}</h4>
+                                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{exp.description}</p>
                             </motion.div>
                         ))}
                     </div>
